@@ -3,9 +3,11 @@
 :root {
   --vdarkblue: hsl(233, 47%, 7%);
   --darkdesblue: hsl(244, 38%, 16%);
-  --sviolet: hsl(277, 100%, 30%);
+  --sviolet: #5d009b;
   --interfont: "Inter";
   --lexendfont: "Lexend Deca";
+  --swhite: hsla(0, 0%, 100%, 0.6);
+  --swhitepar: hsla(0, 0%, 100%, 0.75);
 }
 * {
   box-sizing: border-box;
@@ -32,34 +34,81 @@ main {
 /*Container*/
 .container {
   border-radius: 10px;
-  width: 20em;
-  height: 85vh;
+  width: 19em;
+  height: 88vh;
   background-color: var(--darkdesblue);
   display: flex;
   flex-direction: column;
 }
 
 .imageheader {
+  position: relative;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  position: relative;
+  width: 100%;
   height: 13em;
-  top: -2%;
   background-image: url(/images/image-header-mobile.jpg);
   background-size: cover;
   background-position: top;
+  margin-bottom: 2em;
 }
 .imageheader::before {
   content: "";
-  position: relative;
-  top: 46%;
-  padding: 30% 50%;
+  display: block;
+  width: 100%;
+  height: 100%;
   background-color: var(--sviolet);
   opacity: 50%;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
-/**/
+
+.text {
+  display: grid;
+  grid-template-rows: 0.72fr 1fr 1.8fr;
+  margin: 0 2em;
+  font-family: var(--interfont);
+  text-align: center;
+  color: white;
+  height: 60vh;
+}
+.headtext {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.desc {
+  font-size: 0.9rem;
+  line-height: 1.8em;
+  font-weight: 200;
+  color: var(--swhitepar);
+  margin-top: 0.5em;
+}
+.datalist {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+.datalist ul {
+  display: grid;
+  list-style-type: none;
+  align-items: center;
+}
+.datalist ul li {
+  line-height: 1.5em;
+}
+.datalist ul li h1 {
+  font-size: 1.4rem;
+}
+.datalist ul li p {
+  font-size: 0.7rem;
+  font-weight: 200;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-family: var(--lexendfont);
+  color: var(--swhite);
+}
+
 /**/
 /**/
 /**/
