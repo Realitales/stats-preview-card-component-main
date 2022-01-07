@@ -109,8 +109,60 @@ main {
   color: var(--swhite);
 }
 
-/**/
-/**/
-/**/
-/**/
-/**/
+@media (min-width: 1440px) {
+  .container {
+    width: 80em;
+    height: 55vh;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .imageheader {
+    border-radius: 10px;
+    width: 70%;
+    height: 100%;
+    order: 2;
+  }
+
+  .imageheader::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: var(--sviolet);
+    opacity: 50%;
+    border-radius: 10px;
+  }
+
+  .text {
+    display: grid;
+    grid-template-rows: 0.2fr 0.2fr 0.2fr;
+    align-items: center;
+    width: 40em;
+    height: 38.5vh;
+    text-align: left;
+    margin: 5em 6em 5em 5em;
+  }
+
+  .headtext {
+    font-size: 2.4rem;
+  }
+
+  .desc {
+    font-size: 1rem;
+    line-height: 1.8em;
+    font-weight: 200;
+    color: var(--swhitepar);
+    margin-top: 0.5em;
+  }
+
+  .datalist {
+    height: 10%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .datalist ul {
+    display: flex;
+  }
+}
