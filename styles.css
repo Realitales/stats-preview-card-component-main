@@ -17,6 +17,8 @@
 .attribution {
   font-size: 11px;
   text-align: center;
+  color: white;
+  font-family: var(--lexendfont);
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
@@ -118,29 +120,24 @@ main {
   }
 
   .imageheader {
-    border-radius: 10px;
-    width: 70%;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 10px;
     height: 100%;
     order: 2;
   }
 
   .imageheader::before {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-color: var(--sviolet);
-    opacity: 50%;
-    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 10px;
   }
 
   .text {
     display: grid;
-    grid-template-rows: 0.2fr 0.2fr 0.2fr;
+    gap: 2em;
     align-items: center;
+    text-align: left;
     width: 40em;
     height: 38.5vh;
-    text-align: left;
     margin: 5em 6em 5em 5em;
   }
 
@@ -150,19 +147,22 @@ main {
 
   .desc {
     font-size: 1rem;
-    line-height: 1.8em;
-    font-weight: 200;
-    color: var(--swhitepar);
-    margin-top: 0.5em;
+    width: 80%;
   }
-
   .datalist {
-    height: 10%;
-    display: flex;
-    justify-content: center;
+    justify-content: left;
   }
-
   .datalist ul {
     display: flex;
+  }
+  .datalist ul li {
+    margin-right: 5em;
+    line-height: 1.8em;
+  }
+  .datalist ul li h1 {
+    font-size: 1.6rem;
+  }
+  .datalist ul li p {
+    font-size: 0.8rem;
   }
 }
